@@ -9,6 +9,8 @@ services:
       - 4200
     ports:
       - "4200:4200"
+    container_name: angular-container
+    restart: always
     links:
       - server
   
@@ -16,6 +18,10 @@ services:
     build: server
     ports: 
       - "3000:3000"
+    depends_on: 
+      - database
+    container_name: server-container
+    restart: always
     links:
       - database
 
@@ -23,3 +29,31 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+    # environment:
+    #   - MONGO_INITDB_ROOT_USERNAME=test
+    #   - MONGO_INITDB_ROOT_PASSWORD=SECRET#123
+    #   - MONGODB_USERNAME=test
+    #   - MONGODB_PASSWORD=SECRET#123
+    #   - MONGODB_DATABASE=MEANStackDB
+    # volumes:
+    #       - ./usr/src/app:/data/db
+    container_name: database-container
+    # command: mongod --smallfiles --logpath=/dev/null # --quiet
+    restart: always
+
+
+
+#     mongo:
+#   restart: always
+#  image: mongo:latest
+#  container_name: "mongodb"
+#  environment:
+#   - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+#   - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+#   - MONGODB_USERNAME=test
+#   - MONGODB_PASSWORD=test123
+#   - MONGODB_DATABASE=test1
+ 
+# ports:
+#   - 27017:27017
+# command: mongod --smallfiles --logpath=/dev/null # --quiet
