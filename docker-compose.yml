@@ -1,12 +1,16 @@
-version: '3.5'
+version: '3'
 # docker-compose version
 
 # servicices / containers to be run
 services: 
   angular:
     build: angular
+    expose:
+      - 4200
     ports:
       - "4200:4200"
+    links:
+      - server
   
   server:
     build: server

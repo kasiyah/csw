@@ -6,7 +6,7 @@ COPY . /usr/src/app
 # COPY package-lock.json /usr/src/app
 RUN npm cache clean --force && npm install
 # COPY . /usr/src/app
-ENV PORT 4200
+# ENV PORT 4200
 EXPOSE 4200
 CMD [ "npm", "run", "start" ]
 
