@@ -1,7 +1,5 @@
 version: '3'
-# docker-compose version
 
-# servicices / containers to be run
 services: 
   angular:
     build: angular
@@ -16,6 +14,8 @@ services:
   
   server:
     build: server
+    expose: 
+      - 3000
     ports: 
       - "3000:3000"
     depends_on: 
@@ -27,33 +27,11 @@ services:
 
   database: 
     image: mongo
+    expose:
+      - 27017
     ports:
       - "27017:27017"
-    # environment:
-    #   - MONGO_INITDB_ROOT_USERNAME=test
-    #   - MONGO_INITDB_ROOT_PASSWORD=SECRET#123
-    #   - MONGODB_USERNAME=test
-    #   - MONGODB_PASSWORD=SECRET#123
-    #   - MONGODB_DATABASE=MEANStackDB
-    # volumes:
-    #       - ./usr/src/app:/data/db
     container_name: database-container
-    # command: mongod --smallfiles --logpath=/dev/null # --quiet
     restart: always
 
 
-
-#     mongo:
-#   restart: always
-#  image: mongo:latest
-#  container_name: "mongodb"
-#  environment:
-#   - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-#   - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
-#   - MONGODB_USERNAME=test
-#   - MONGODB_PASSWORD=test123
-#   - MONGODB_DATABASE=test1
- 
-# ports:
-#   - 27017:27017
-# command: mongod --smallfiles --logpath=/dev/null # --quiet
