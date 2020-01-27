@@ -1,5 +1,6 @@
 h1.title {
     background-color: #006987;
+    border-radius:3px;
     border: none;
     color: white;
     padding: 15px;
@@ -10,6 +11,7 @@ h1.title {
   }
   .topnav {
     overflow: hidden;
+    border-radius:3px;
     background-color: #02003A;
   }
   .topnav a{
@@ -21,12 +23,18 @@ h1.title {
     text-decoration: none;
   }
   .topnav a:hover {
+    border-radius:3px;
     background-color: #000F6C;
     color: white;
   }
   .column {
     float: left;
     width: 50%;
+  }
+  .glyph{
+    position: relative;
+    left: 35px;
+    pointer-events: none;
   }
   .button {
     background-color: #0028E5;
