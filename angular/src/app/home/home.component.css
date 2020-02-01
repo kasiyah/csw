@@ -35,6 +35,7 @@ h1.title {
     position: relative;
     left: 35px;
     pointer-events: none;
+    color: aqua;
   }
   .button {
     background-color: #0028E5;
