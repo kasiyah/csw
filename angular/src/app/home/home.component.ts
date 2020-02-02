@@ -9,6 +9,7 @@ import { User } from '../shared/user.model';
 })
 export class HomeComponent implements OnInit {
   localUser;
+  inputCode: string;
   constructor(private userService: UserService) { }
 
   ngOnInit() {
@@ -23,4 +24,8 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  run(){
+    this.inputCode = ((document.getElementById("codeInput") as HTMLInputElement).value);
+    console.log(this.inputCode)
+  }
 }
