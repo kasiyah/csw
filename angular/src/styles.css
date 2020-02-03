@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+@import "codemirror/lib/codemirror.css";
+@import "codemirror/theme/material.css";
+
 /* BASIC */
 
 html {
