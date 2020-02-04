@@ -12,6 +12,17 @@
     <br>
     <form action= "/action_page.php"> 
       Code: <br>
+
+      <ngx-codemirror
+      [(ngModel)]="content"
+      [ngModelOptions]="{standalone: true}"
+      [options]="{
+      lineNumbers: true,
+      theme: 'material',
+      mode: 'markdown'
+      }"
+      ></ngx-codemirror>
+
       <textarea class="text_input" id="codeInput" wrap="off" rows="35" cols="60" autocapitalize="off" autocorrect="off"  spellcheck="false" placeholder="Enter code here..." style="resize: none;"></textarea>
       <textarea class="visualizer" rows="36" cols="120" placeholder="visualizer" style="resize: none;" readonly></textarea>
       <br>
