@@ -1,0 +1,17 @@
+<html>
+
+<body>
+    <form>
+        First name:<br>
+        <input type="text" name="firstname" value={{userDetails.fullName.split(0)}}>
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" value={{userDetails.fullName.split(1)}}>
+        <br>
+        Email:<br>
+        <input type="text" name="email" value={{userDetails.email}}>
+    </form>
+    <input type="button" (click)="onLogout()" value="Logout" />
+              <input type="button" value="Modify" />
+</body>
+</html>
