@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://kassiyah.duckdns.org:3000/api'
+  apiBaseUrl: 'http://jgcapstoneenv.duckdns.org:3000/api'
 };
 
 /*

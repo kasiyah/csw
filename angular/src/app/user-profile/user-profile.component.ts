@@ -28,4 +28,8 @@ export class UserProfileComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  onModify(){
+    document.getElementById('infochange').style.display ="block";
+  }
+
 }
