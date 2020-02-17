@@ -28,4 +28,14 @@ export class HomeComponent implements OnInit {
     this.inputCode = ((document.getElementById("codeInput") as HTMLInputElement).value);
     console.log(this.inputCode)
   }
+
+  run2(){
+    var editor = <any>document.querySelector(".CodeMirror");
+    var editor1 = editor.CodeMirror.getValue();
+    //var testVal = (document.getElementById("codeInput") as HTMLInputElement);
+    //var inputBox = <HTMLInputElement>document.getElementById("codeMirror").children.item(0);
+    //this.inputCode = inputBox.value;
+    //var text = testVal.value;
+    console.log(editor1)
+  }
 }
