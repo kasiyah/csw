@@ -25,7 +25,9 @@ export class HomeComponent implements OnInit {
   }
 
   run(){
-    this.inputCode = ((document.getElementById("codeInput") as HTMLInputElement).value);
-    console.log(this.inputCode)
+    var editor = <any>document.querySelector(".CodeMirror");
+    var editor1 = editor.CodeMirror.getValue();
+    console.log(editor1);
+    (document.getElementById("output") as HTMLInputElement).value = editor1;
   }
 }

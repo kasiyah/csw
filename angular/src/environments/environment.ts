@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://kassiyah.duckdns.org:3000/api'
+  apiBaseUrl: 'http://zacktestenv.duckdns.org:3000/api'
 };
 
 /*

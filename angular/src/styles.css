@@ -401,3 +401,11 @@ td.text-center {
 td.text-right {
   text-align: right;
 }
+
+
+/* Codemirror Styles */
+.CodeMirror {
+  border: 1px solid #eee;
+  width: 75%;
+}
+
