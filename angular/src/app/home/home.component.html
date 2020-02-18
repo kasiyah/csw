@@ -5,10 +5,20 @@
   <body>
     <h1 class="title">HOME PAGE</h1>
     <div *ngIf="localUser" class="topnav" >
+      <!--Modal Window-->
+      <input type="checkbox" id="modalWindow" class="visually-hidden">
+      <label for="modalWindow" class="checkbox-hover">{{ localUser.fullName }}</label>
+      <div>
+        <div>
+          <label for="modalWindow">x</label>
+          <iframe src="./userprofile" class="modalContents"></iframe>
+        </div>
+      </div>
+      <!--Modal Window End-->
       <a href="#">Example Link</a>
       <a href="#">Example Link</a>
-      <a href="./userprofile"target="popup"onclick="window.open('./userprofile','popup','width=600,height=600');">{{ localUser.fullName }}</a>
     </div>
+    
     <br>
     <form action= "/action_page.php"> 
       Code: <br>
