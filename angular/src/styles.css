@@ -430,3 +430,103 @@ td.text-right {
   margin-bottom:10px;
   opacity: 0.8;
 }
+
+
+/* Modal Window-Trigger(checkbox) */
+input[id*="modalWindow"]+label{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+input[id*="modalWindow"]+label+div{
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+/* Modal Window-form */
+input[id*="modalWindow"]+label+div>div{
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: -600%;
+  width: 600px;
+  max-width: 600px;
+  border-radius: 2%;
+  border-style: groove;
+  border-color: #02003A;
+  border-width: 3px;
+  background: #fff;
+  z-index: 2;
+}
+/* Display Modal Window */
+input[id*="modalWindow"]:checked+label+div>div{
+  right: 0%;
+  transition: all 0.5s ease-in-out;
+}
+/* Close button */
+input[id*="modalWindow"]+label+div>div>label{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-radius: 6.1px 0px 6.1px;
+  padding: 5px 13px 5px;
+  background-color: #d52500;
+  color: white;
+  z-index: 1;
+}
+input[id*="modalWindow"]:hover+label+div>div>label{
+  /*position: absolute;
+  top: 0%;
+  left: 0%;
+  border-radius: 6.1px 0px 6.1px;
+  padding: 5px 13px 5px;*/
+  background-color: #ca614b;
+  color: white;
+  transform: scale(1.05);
+  transition: all .25s ease-in-out;
+  z-index: 1;
+}
+
+/* Monotone Main Page */
+input[id*="modalWindow"]:checked+label+div{
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  transition: all .25s ease-in;
+  z-index: 1;
+}
+/* Checkbox visibility */
+.visually-hidden {
+  position: absolute;
+  opacity: 0;
+}
+/* User Fullname hover effect */
+.checkbox-hover:hover {
+  float: right;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius:3px;
+  background-color: #000F6C;
+}
+/* Modal Window-Contents Form(user profile) */
+.modalContents{
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  width: 595px;
+  max-width: 600px;
+  height: 620px;
+  border-radius: 2%;
+  border: none;
+}
