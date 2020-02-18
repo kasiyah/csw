@@ -18,6 +18,10 @@
             <td id='emailtd'>{{userDetails.email}}</td>
         </tr>
         <tr>
+            <td>Password</td>
+            <td id='pwtd'>{{userDetails.password}}</td>
+        </tr>
+        <tr>
             <td colspan="2" class="text-center">
                 <input type="button" (click)="onLogout()" value="Logout" />
                 <input type="button" (click)="onModify()" value="Modify">
@@ -27,7 +31,7 @@
   </table>
 
   <div class="form-popup" id="infochange">
-      <form action=" /action_page.php" class="form-container">
+      <form action=" /action_page.php" class="form-container" style="height: 600px">
         <h1>Edit User Information</h1>
         First name:<br>
         <input type="text" placeholder="First Name..." name="firstname" required>
@@ -47,6 +51,6 @@
         Confirm Password:<br>
         <input type="password" placeholder="Please Confirm Password" name="confirm password">
         
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn" (click)="onSubmit()">Submit</button>
       </form>
   </div>
