@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html> 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/app/styles.css">
 
   <body>
     <h1 class="title">HOME PAGE</h1>
@@ -27,16 +28,19 @@
       width: 75%
       " readonly></textarea>
 
-      <br>
-      <span><i class="fas fa-fast-backward glyph"></i></span>
-      <input type="button" class="button" value=" First" />
-      <span><i class="fas fa-step-backward glyph"></i></span>
-      <input type="button" class="button" value=" Prev" />
-      <span><i class="fas fa-step-forward glyph"></i></span>
-      <input type="button" class="button" value=" Next" />
-      <span><i class="fas fa-play glyph"></i></span>
-      <input type="button" (click)="run()" class="button" value=" Run" />
-      <br>
+      <textarea class="text_input" id="codeInput" wrap="off" rows="35" cols="60" autocapitalize="off" autocorrect="off"  spellcheck="false" placeholder="Enter code here..." style="resize: none;"></textarea>
+      <textarea class="visualizer" rows="36" cols="120" placeholder="visualizer" style="resize: none;" readonly></textarea>
+        <br>
+          <span><i class="fas fa-fast-backward glyph"></i></span>
+          <input type="button" style="background-color:#0028E5" value=" First" />
+          <span><i class="fas fa-step-backward glyph"></i></span>
+          <input type="button" style="background-color:#0028E5" value=" Prev" />
+          <span><i class="fas fa-step-forward glyph"></i></span>
+          <input type="button" style="background-color:#0028E5" value=" Next" />
+          <span><i class="fas fa-play glyph"></i></span>
+          <input type="button" (click)="run()" style="background-color:#0028E5" value=" Run" />
+        <br>
+
         Output:
       <br>
       <textarea class='output' id="output" rows="15" cols="100" placeholder="Output of code..." style="resize: none;"></textarea>
