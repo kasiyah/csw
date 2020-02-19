@@ -2,8 +2,7 @@ FROM node
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
-RUN npm cache clean --force && npm install
-EXPOSE 4200
+# RUN npm cache clean --force && npm install
 CMD [ "npm", "run", "start" ]
 
 
