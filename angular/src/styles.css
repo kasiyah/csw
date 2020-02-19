@@ -402,6 +402,7 @@ td.text-right {
   text-align: right;
 }
 
+
 /* Home Page */
 h1.title {
   background-color: #006987;
@@ -455,6 +456,13 @@ h1.title {
   margin: 4px 2px;
   cursor: pointer;
 }*/
+
+
+/* Codemirror Styles */
+.CodeMirror {
+  border: 1px solid #eee;
+  width: 75%;
+}
 
 
 /* The new user info modification form */

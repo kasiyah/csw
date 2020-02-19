@@ -6,14 +6,11 @@
   <body>
     <h1 class="title">HOME PAGE</h1>
     <div *ngIf="localUser" class="topnav" >
-      <a href="#">Example Link</a>
-      <a href="#">Example Link</a>
       <a href="./userprofile"target="popup"onclick="window.open('./userprofile','popup','width=600,height=600');">{{ localUser.fullName }}</a>
     </div>
     <br>
-    <form action= "/action_page.php"> 
-      Code: <br>
 
+      Code: <br>
       <ngx-codemirror
       [(ngModel)]="content"
       [ngModelOptions]="{standalone: true}"
@@ -23,6 +20,13 @@
       mode: 'text/x-java'
       }"
       ></ngx-codemirror>
+ 
+      <textarea class="visualizer" placeholder="visualizer" 
+      style="
+      resize: none;
+      height: 300px;
+      width: 75%
+      " readonly></textarea>
 
       <textarea class="text_input" id="codeInput" wrap="off" rows="35" cols="60" autocapitalize="off" autocorrect="off"  spellcheck="false" placeholder="Enter code here..." style="resize: none;"></textarea>
       <textarea class="visualizer" rows="36" cols="120" placeholder="visualizer" style="resize: none;" readonly></textarea>
@@ -36,9 +40,9 @@
           <span><i class="fas fa-play glyph"></i></span>
           <input type="button" (click)="run()" style="background-color:#0028E5" value=" Run" />
         <br>
+
         Output:
       <br>
-      <textarea class='output' id="output" rows="15" cols="100" placeholder="Output of code..." style="resize: none;">{{inputCode}}</textarea>
-    </form>
+      <textarea class='output' id="output" rows="15" cols="100" placeholder="Output of code..." style="resize: none;"></textarea>
 </body>
 </html>
