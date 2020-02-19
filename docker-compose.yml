@@ -1,26 +1,26 @@
 version: '3'
 
 services: 
-  angular:
-    build: angular
+  angular_server:
+    build: angular_server
     expose:
       - 4200
     ports:
       - "4200:4200"
-    container_name: angular-container
+    container_name: angular_container
     restart: always
     links:
-      - server
+      - express_server
   
-  server:
-    build: server
+  express_server:
+    build: express_server
     expose: 
       - 3000
     ports: 
       - "3000:3000"
     depends_on: 
       - database
-    container_name: server-container
+    container_name: express_server_container
     restart: always
     links:
       - database
@@ -33,5 +33,16 @@ services:
       - "27017:27017"
     container_name: database-container
     restart: always
+
+  angular_test:
+    build: angular_server
+    expose:
+      - 4201
+    ports:
+      - "4201:4200"
+    container_name: angular_test_container
+    restart: always
+    links:
+      - express_server
 
 
