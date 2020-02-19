@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://jihyetestenv.duckdns.org:3000/api'
+  apiBaseUrl: 'http://localhost:3000/api'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as

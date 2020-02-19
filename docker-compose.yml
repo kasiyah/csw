@@ -12,7 +12,7 @@ services:
     links:
       - express_server
     command:
-      bash -c "npm cache clean --force && npm install && npm install -g @angular/cli && ng serve --host 0.0.0.0"
+      bash -c "npm cache clean --force && npm install && npm install -g @angular/cli && ng serve --host 0.0.0.0 --disableHostCheck"
   
   express_server:
     build: express_server
@@ -47,5 +47,5 @@ services:
     links:
       - express_server
     command: 
-      bash -c "npm cache clean --force && npm install && npm install -g @angular/cli && ng serve --host 0.0.0.0 && ng test"
+      bash -c "npm cache clean --force && npm install && npm install -g @angular/cli && ng serve --host 0.0.0.0 --disableHostCheck && ng test "
 
